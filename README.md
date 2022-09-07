@@ -1,0 +1,1 @@
+# DAO слой c Hibernate
