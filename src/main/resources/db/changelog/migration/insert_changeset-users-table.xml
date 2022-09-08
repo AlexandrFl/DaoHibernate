@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                     http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="2" author="F" >
+        <insert tableName="users_table">
+            <column name="name" value="Tom"/>
+            <column name="surname" value="Tomson"/>
+            <column name="age" value="21"/>
+            <column name="number" value="93432"/>
+            <column name="city" value="Moscow"/>
+        </insert>
+        <insert tableName="users_table">
+            <column name="name" value="Bob"/>
+            <column name="surname" value="Bobov"/>
+            <column name="age" value="23"/>
+            <column name="number" value="93666"/>
+            <column name="city" value="Boston"/>
+        </insert>
+        <insert tableName="users_table">
+            <column name="name" value="Elena"/>
+            <column name="surname" value="Elenova"/>
+            <column name="age" value="66"/>
+            <column name="number" value="23122"/>
+            <column name="city" value="Samara"/>
+        </insert>
+        <insert tableName="users_table">
+            <column name="name" value="Stas"/>
+            <column name="surname" value="Stasov"/>
+            <column name="age" value="99"/>
+            <column name="number" value="12312"/>
+            <column name="city" value="Rostov"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
