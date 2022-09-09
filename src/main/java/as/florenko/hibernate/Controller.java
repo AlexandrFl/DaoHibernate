@@ -1,11 +1,8 @@
 package as.florenko.hibernate;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
+import as.florenko.hibernate.repository.Repository;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/")
@@ -17,7 +14,17 @@ public class Controller {
     }
 
     @GetMapping("/persons/by-city")
-    public List getUserByCity(@RequestParam String city) {
+    public ResponseEntity<Object> getUserByCity(@RequestParam String city) {
         return repository.findByCity(city);
+    }
+
+    @GetMapping("/persons/by-age")
+    public ResponseEntity<Object> getUserByCity(@RequestParam int age) {
+        return repository.findByAge(age);
+    }
+
+    @GetMapping("/persons/by-name")
+    public ResponseEntity<Object> getUserByCity(@RequestParam String name, String surname) {
+        return repository.findByNameAdnSurname(name, surname);
     }
 }
